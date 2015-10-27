@@ -1,0 +1,78 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html lang="en">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+          <title>Hjemmet</title>
+
+  </head>
+
+  <header>
+
+    <h1>Alltid sommer / Olav i skogen </h1>
+
+  </header>
+  <body>
+  <div id="content">
+
+    <script src="bower_components/jquery-2.1.4.min/index.js"></script>
+    <script type="text/javascript">
+
+
+      var data = { "users":[
+            {
+                "firstName":"Ray",
+                "lastName":"Villalobos",
+                "joined": [
+                   {"path": "hyttaPanorama-min.jpg"}
+                ]
+            },
+            {
+                "firstName":"John",
+                "lastName":"Jones",
+                "joined": [
+                   {"path": "morten1-min.jpg"},
+                   {"path": "morten2-min.jpg"},
+                   {"path": "morten3-min.jpg"},
+                ]
+            },
+            {
+                "firstName":"John",
+                "lastName":"Jones",
+                "joined": [
+                   {"path": "morten1-min.jpg"},
+                   {"path": "morten2-min.jpg"},
+                   {"path": "morten3-min.jpg"},
+                ]
+            }
+    ]}
+
+
+     $(document).ready(function() {
+
+      for (var i in data.users) {
+        alert("<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined[0].path+"</li>");
+    }
+
+
+        console.log("hello");
+                    
+     
+    });
+
+
+
+    function fourimages(counter) {
+      for (var i = counter; counter < data.length; i++) {
+        alert("<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>");
+    }
+    }
+
+
+      </script>
+    </body>
+  </div>
+  </html>
