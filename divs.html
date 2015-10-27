@@ -38,3 +38,21 @@
             <img src="images-compressed/simon4-min.jpg"/>
       </article>
     </section>
+
+
+
+
+      function AddOneImage(jsonObject) {
+    return '<section class="placeholder"><article class="full"><img src="images-compressed/' + jsonObject[0].path + '"/></article></section>'
+  }
+
+  function AddTwoImages(jsonObject) {
+    return '<section class="placeholder"><article class="half"><img src="images-compressed/' + jsonObject[0].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[1].path  + '"/></article></section>'
+  }
+  function AddThreeImages(jsonObject) {
+    return '<section class="placeholder"><article class="half"><img src="images-compressed/' + jsonObject[0].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[1].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[2].path  + '"/></article></section>'
+  }
+  function AddFourImages(jsonObject) {
+    return '<section class="placeholder"><article class="half"><img src="images-compressed/' + jsonObject[0].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[1].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[2].path  + '"/></article><article class="half"><img src="images-compressed/' + jsonObject[3].path  + '"/></article></section>'
+  }
+

@@ -3,10 +3,10 @@
   <html lang="en">
   <link href="stylesheet.css" rel="stylesheet" type="text/css" />
   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-
-          <title>Hjemmet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!--- thanks to http://www.appelsiini.net/projects/lazyload/enabled.html for great imageLoader -->
+    <title>Hjemmet</title>
 
   </head>
 
@@ -16,63 +16,174 @@
 
   </header>
   <body>
-  <div id="content">
-
-    <script src="bower_components/jquery-2.1.4.min/index.js"></script>
-    <script type="text/javascript">
-
-
-      var data = { "users":[
-            {
-                "firstName":"Ray",
-                "lastName":"Villalobos",
-                "joined": [
-                   {"path": "hyttaPanorama-min.jpg"}
-                ]
-            },
-            {
-                "firstName":"John",
-                "lastName":"Jones",
-                "joined": [
-                   {"path": "morten1-min.jpg"},
-                   {"path": "morten2-min.jpg"},
-                   {"path": "morten3-min.jpg"},
-                ]
-            },
-            {
-                "firstName":"John",
-                "lastName":"Jones",
-                "joined": [
-                   {"path": "morten1-min.jpg"},
-                   {"path": "morten2-min.jpg"},
-                   {"path": "morten3-min.jpg"},
-                ]
-            }
-    ]}
-
-
-     $(document).ready(function() {
-
-      for (var i in data.users) {
-        alert("<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined[0].path+"</li>");
-    }
-
-
-        console.log("hello");
-                    
-     
-    });
-
-
-
-    function fourimages(counter) {
-      for (var i = counter; counter < data.length; i++) {
-        alert("<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>");
-    }
-    }
-
-
-      </script>
-    </body>
+    <div id="content">
+    
   </div>
-  </html>
+  <script src="bower_components/jquery-2.1.4.min/index.js"></script>
+  <script src="node_modules/jquery-lazyload/jquery.lazyload.js"></script>
+  <script type="text/javascript">
+
+
+  var data = { "users":[
+  {
+    "firstName":"Ray",
+    "lastName":"Villalobos",
+    "images": [
+    {"path": "papiOnABoat.jpg"}
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "morten1.jpg"},
+    {"path": "morten2.jpg"},
+    {"path": "morten3.jpg"}
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_1129.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2314.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2513.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2066.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2087.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2543.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_1548.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "IMG_2109.jpg"},
+    ]
+  },
+  {
+    "firstName":"John",
+    "lastName":"Jones",
+    "images": [
+    {"path": "simon1.jpg"},
+    {"path": "simon2.jpg"},
+    {"path": "simon3.jpg"},
+    {"path": "simon4.jpg"},
+    ]
+  }
+  ]}
+
+
+  $(document).ready(function() {
+
+    for (var i in data.users) {
+      addImages(data.users[i].images)
+    }
+
+     $("img.lazy").lazyload({
+        threshold : 300
+      });
+
+  });
+
+
+  function addImages(images) {
+
+    var placeholder = "";
+    if(images.length == 1) {
+      placeholder = AddOneImage(images);
+    } 
+
+    else if(images.length == 2) {
+      placeholder = AddTwoImages(images);
+    }
+
+    else if(images.length == 3) {
+      placeholder = AddThreeImages(images);
+    }
+
+    else if(images.length == 4) {
+      placeholder = AddFourImages(images);
+    }
+    $('#content').append(placeholder);
+  }
+
+  function AddOneImage(jsonObject) {
+    return '<section class="placeholder"><article class="full flexRow"><img class="lazy" data-original="images/' +jsonObject[0].path + '"/></article></section>'
+  }
+
+  function AddTwoImages(jsonObject) {
+    return '<section class="placeholder"><article class="half"><img class="lazy" data-original="images/' + jsonObject[0].path  + '"/></article><article class="half"><img class="lazy" data-original="images/' + jsonObject[1].path  + '"/></article></section>'
+  }
+
+  function AddThreeImages(jsonObject) {
+    return '<section class="placeholder"><article class="onethird flexRow"><img class="lazy" data-original="images/' + jsonObject[0].path  + '"/></article><article class="onethird flexRow"><img class="lazy" data-original="images/' + jsonObject[1].path  + '"/></article><article class="onethird flexRow"><img class="lazy" data-original="images/' + jsonObject[2].path  + '"/></article></section>'
+  }
+
+  function AddFourImages(jsonObject) {
+    return '<section class="placeholder flexRow"><article class="onefourth flexRow"><img class="lazy" data-original="images/' + jsonObject[0].path  + '"/></article><article class="onefourth flexRow"><img class="lazy" data-original="images/' + jsonObject[1].path  + '"/></article><article class="onefourth flexRow"><img class="lazy" data-original="images/' + jsonObject[2].path  + '"/></article><article class="onefourth flexRow"><img class="lazy" data-original="images/' + jsonObject[3].path  + '"/></article></section>'
+  }
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
