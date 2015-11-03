@@ -1,3 +1,4 @@
 /images/*
 /movies/*
 images-compressed/
+.DS_Store
