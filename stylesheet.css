@@ -9,7 +9,12 @@ h1 {
 	font-family: hiragino sans;	
 	font-weight: 100;
 }
-
+h1 {
+    margin: 0;
+    font-size: 4em;
+    font-family: hiragino sans; 
+    font-weight: 100;
+}
 header {
 	margin: 0px;
 	padding: 0px;
@@ -39,14 +44,13 @@ header {
 
 #content {
 	width: 100%;
-	height: 1000px;
    
 }
 
 img {
 	margin: 5px;
-	max-height:40%; 
-	max-width:40%;
+	max-height:100%; 
+	max-width:100%;
 }
 
 .placeholder {
@@ -110,6 +114,29 @@ img {
     -ms-flex-align: center;
     align-items: center;
 }
+
+.wrap {
+      /* force the div to properly contain the floated images: */
+      position:relative;
+      float:left;
+      clear:none;
+      overflow:hidden;
+    }
+   
+.wrap img {
+      position:relative;
+      z-index:1;
+    }
+
+.wrap .desc {
+      display:block;
+      position:absolute;
+      width:100%;
+      top:10%;
+      left:0;
+      z-index:2;
+      text-align:center;
+    }
 
 @media only screen and (max-device-width: 480px) {
 
