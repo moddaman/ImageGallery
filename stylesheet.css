@@ -1,20 +1,74 @@
+/* RANDOM STUFF */
+
+blink, .blink {
+  -webkit-animation: blink 1s step-end infinite;
+  -moz-animation: blink 1s step-end infinite;
+  -o-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-moz-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-o-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-webkit-keyframes myfirst
+{
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
+    to {text-shadow : none;}
+}
+
+@-moz-keyframes myfirst
+{
+    from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
+    to {text-shadow : none;}
+}
+@keyframes myfirst
+{
+    from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
+    to {text-shadow : none;}
+}
+
+
+
+@font-face {
+    font-family: streamster;
+    src: url(Font/Streamster.ttf);
+}
+
+
 body {
 	margin: 0px;
 	padding: 0px;
 
 }
 
-h1 {
-	margin: 0;
-	font-family: hiragino sans;	
-	font-weight: 100;
-}
+
 h1 {
     margin: 0;
-    font-size: 4em;
-    font-family: hiragino sans; 
+    font-size: 7em;
     font-weight: 100;
+    font-family: streamster;
+    color: yellow;/*rgb(255,5,243);*/
+    transform: translateZ(0);
+    text-shadow: 3px 3px 5px #ba8b00;
+    -webkit-animation: myfirst 1s 5;
+    -moz-animation: myfirst 1s 5;
+    animation: myfirst 1s 5;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
 }
+
 header {
 	margin: 0px;
 	padding: 0px;
@@ -22,25 +76,26 @@ header {
 	background-color: black;
 	color: white;
 
-		 display: -ms-flexbox;
+	    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-align-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 }
+
 
 #content {
 	width: 100%;
