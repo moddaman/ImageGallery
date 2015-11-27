@@ -1,4 +1,5 @@
 /images/*
 /movies/*
+*.[jJ][pP][gG]
 images-compressed/
 .DS_Store
