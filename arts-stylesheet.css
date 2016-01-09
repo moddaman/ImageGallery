@@ -246,6 +246,26 @@ article {
 @media only screen and (max-device-width: 480px) {
 
 
+article {
+  margin-bottom: 0px;
+}
+
+.video-window{
+  padding-top: 4px;
+  margin-top: 0px;
+}
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index:1;
+
+}
+
 img {
     margin: 5px;
     max-height:100%; 

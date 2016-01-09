@@ -156,34 +156,6 @@ header {
 
 /**  SNOW **/
 
-#snow{
-    background: none;
-    font-family: Androgyne;
-    background-image: url('effects/snow/s1.png'), url('effects/snow/s2.png'), url('effects/snow/s3.png');
-    height: 100%;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    z-index:1;
-    -webkit-animation: snow 10s linear infinite;
-    -moz-animation: snow 10s linear infinite;
-    -ms-animation: snow 10s linear infinite;
-    animation: snow 10s linear infinite;
-
-}
-@keyframes snow {
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-moz-keyframes snow {
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-}
-@-webkit-keyframes snow {
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-ms-keyframes snow {
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}   
-
 
 
 
