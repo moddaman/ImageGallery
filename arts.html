@@ -1,7 +1,7 @@
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
   <html lang="en">
-  <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="arts-stylesheet.css" rel="stylesheet" type="text/css" />
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
@@ -12,20 +12,76 @@
 
   <header>
 
-  <h1>Teknoo!</h1>
-  <nav>
-    <a href="arts.html">arts</a>
-    <a href="index.html">bilder</a>
-  </nav>
+    <h1>Aldri Sommer</h1>
+    <nav>
+      <a href="arts.html">arts</a>
+      <a href="index.html">bilder</a>
+    </nav>
 
   </header>
   <body>
     <div id="content">
-    
-  </div>
- 
-</body>
-</html>
+      <article class="center-placeholder">
+        <div class="content-placeholder">
+          <div id="snow"></div>
+          <img  class="special" src="utvalgte/IMG_0087.jpg" />
+        </div>
+      </article>
+      
+      <article class="center-placeholder">
+        <img  class="special" style="width:600px;" src="utvalgte/thumb_IMG_2566_1024.jpg"
+        onmouseover="this.src='utvalgte/IMG_2566.JPG'" onmouseout="this.src='utvalgte/thumb_IMG_2566_1024.jpg'"/>
+      </article><
+
+      <article class="center-placeholder">
+        <video class="special" src="utvalgte/IMG_1516_CLIPCHAMP_480p.mp4" controls >
+      </video>
+      </article>
+
+  <article onload="run();" class="bottom-margin">
+        <script src="effects/rainyday.min.js"></script>
+        <script>
+        function run() {
+          var image = document.getElementById('background');
+          var rainDiv = document.getElementById('rainyday');
+
+          console.log(image + "hello" + rainDiv);
+          image.onload = function() {
+           var engine = new RainyDay({
+            image: image,   
+            parentElement: rainDiv, 
+            blur: 4,               
+            opacity: 1          
+          });
+           engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+         };
+         image.crossOrigin = 'anonymous';
+         image.src = 'utvalgte/IMG_2241.JPG';
+       }
+       </script>
+       <div id="rainyday">
+        <img onload="run();" id="background" class="panorama" src="utvalgte/IMG_2241.JPG" crossorigin="anonymous" />
+      </div>
+    </article> 
+
+       <article class="center-placeholder">
+        <img  class="special" style="width:600px;" src="utvalgte/thumb_IMG_2566_1024.jpg"
+        onmouseover="this.src='utvalgte/IMG_2566.JPG'" onmouseout="this.src='utvalgte/thumb_IMG_2566_1024.jpg'"/>
+      </article><
+     
+   
+
+
+  <!--     <article class="center-placeholder">
+        <img id="image" class="image special" src="utvalgte/DSC_0358.JPG" />
+        <p class="text streamster white" >
+          Drive
+        </p>
+      </article> -->
+    </div>
+
+  </body>
+  </html>
 
 
 

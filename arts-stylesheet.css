@@ -1,0 +1,297 @@
+/* RANDOM STUFF */
+
+@font-face {
+    font-family: streamster;
+    src: url(Font/Streamster.ttf);
+}
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 7em;
+    font-weight: 100;
+    font-family: streamster;
+    color: white;/*rgb(255,5,243);*/
+}
+
+h3 {
+   font-family: streamster;
+}
+
+header {
+	margin: 0px;
+	padding: 0px;
+	height: 550px;
+	background-color: black;
+	color: white;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+
+#content {
+	width: 100%;
+   
+}
+
+.lazy {
+	margin: 0px;
+	max-height:100%; 
+	max-width:100%;
+}
+
+.placeholder {
+
+    width: 100%;
+	    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.center-placeholder{
+    position: relative;
+    display:block;
+    width: 100%;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.special {
+    width: 50%;
+    display:block;
+    margin:auto;
+}
+
+.video-window{
+  padding-top: 20px;
+  margin-top: 50px;
+}
+    
+.image {
+  position: absolute;
+  left:25%;
+  margin-left:0px;
+}
+.text {
+  z-index: 100;
+  position: absolute;
+  color: white;
+   margin-left:0px;
+   top: 350px;
+   text-align: center; 
+   font-size: 8em;
+   font-weight: 100;
+   color: pink;
+}
+
+.bottom-margin {
+  margin-bottom: 120px;
+}
+
+.white {
+    width: 100%;
+    background-color: white;
+}
+
+
+.panorama {
+    max-width: 100%;
+}
+
+.streamster {
+    font-family: streamster;
+}
+
+.full {
+	width: 100%;
+}
+
+.half {
+	width: 50%;
+
+}
+
+.onethird{
+	width: 33%;
+}
+
+.onefourth {
+	width: 25%;
+}
+
+
+.flexRow {
+     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.wrap {
+      /* force the div to properly contain the floated images: */
+      position:relative;
+      float:left;
+      clear:none;
+      overflow:hidden;
+    }
+   
+.wrap img {
+      position:relative;
+      z-index:1;
+    }
+
+.wrap .desc {
+      display:block;
+      position:absolute;
+      width:100%;
+      top:10%;
+      left:0;
+      z-index:2;
+      text-align:center;
+    }
+
+/**  SNOW **/
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    background-image: url('effects/snow/s1.png'), url('effects/snow/s2.png'), url('effects/snow/s3.png');
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index:1;
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+}
+
+
+@keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}   
+
+
+#rainyday {
+      position:relative; 
+}
+
+@media only screen and (max-device-width: 480px) {
+
+
+img {
+    margin: 5px;
+    max-height:100%; 
+    max-width:100%;
+}
+    .placeholder {
+    margin: 10px;
+    width: 100%;
+     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.full {
+    width: 100%;
+
+    }
+
+.half {
+    width: 50%;
+}
+
+.onethird {
+    width: 33%;
+}
+
+.onefourth {
+    width: 25%;
+}
+
+}
+
+
+
+

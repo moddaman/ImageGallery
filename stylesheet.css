@@ -1,44 +1,5 @@
 /* RANDOM STUFF */
 
-blink, .blink {
-  -webkit-animation: blink 1s step-end infinite;
-  -moz-animation: blink 1s step-end infinite;
-  -o-animation: blink 1s step-end infinite;
-  animation: blink 1s step-end infinite;
-}
-
-@-webkit-keyframes blink {
-  67% { opacity: 0 }
-}
-
-@-moz-keyframes blink {
-  67% { opacity: 0 }
-}
-
-@-o-keyframes blink {
-  67% { opacity: 0 }
-}
-
-@keyframes blink {
-  67% { opacity: 0 }
-}
-
-@-webkit-keyframes myfirst
-{
-    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
-    to {text-shadow : none;}
-}
-
-@-moz-keyframes myfirst
-{
-    from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
-    to {text-shadow : none;}
-}
-@keyframes myfirst
-{
-    from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;}
-    to {text-shadow : none;}
-}
 
 
 
@@ -60,23 +21,20 @@ h1 {
     font-size: 7em;
     font-weight: 100;
     font-family: streamster;
-    color: yellow;/*rgb(255,5,243);*/
-    transform: translateZ(0);
-    text-shadow: 3px 3px 5px #ba8b00;
-    -webkit-animation: myfirst 1s 5;
-    -moz-animation: myfirst 1s 5;
-    animation: myfirst 1s 5;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    color: white;/*rgb(255,5,243);*/
+}
+
+h3 {
+   font-family: streamster;
 }
 
 header {
 	margin: 0px;
 	padding: 0px;
-	height: 300px;
+	height: 550px;
 	background-color: black;
 	color: white;
-
-	    display: -ms-flexbox;
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -102,7 +60,7 @@ header {
    
 }
 
-img {
+.lazy {
 	margin: 0px;
 	max-height:100%; 
 	max-width:100%;
@@ -130,6 +88,9 @@ img {
     -ms-flex-align: center;
     align-items: center;
 }
+
+
+ 
 
 .full {
 	width: 100%;
@@ -192,6 +153,39 @@ img {
       z-index:2;
       text-align:center;
     }
+
+/**  SNOW **/
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    background-image: url('effects/snow/s1.png'), url('effects/snow/s2.png'), url('effects/snow/s3.png');
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index:1;
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+
+}
+@keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}   
+
+
+
 
 @media only screen and (max-device-width: 480px) {
 
